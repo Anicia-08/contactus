@@ -3,8 +3,8 @@ export default function App() {
   const [name,setName] = useState("");
   const [email,setEmail] = useState("");
   const [message,setMessage] = useState("");
-  const [checkbox,setCheckbox] = useState(false);
-  const [radiobutton,setRadiobutton] = useState(false);
+  const [check,setCheckbox] = useState(false);
+  const [radio,setRadiobutton] = useState(false);
   const validateForm = (e)=>{
      e.preventDefault();
      if(name === "" || email === "" || message === ""){
@@ -39,26 +39,26 @@ export default function App() {
         value={message} 
         onChange={(e)=>setMessage(e.target.value)}
         required></textarea><br/><br/>
-        <checkbox
+        <input
         type="checkbox"
-        value={checkbox}
+        value={check}
         onChange={(e)=>setCheckbox(e.target.value)}
-        required>Yes</checkbox><br/>
-        <checkbox
-        type="checkbox"
-        value={checkbox}
+        required></input><ul>Yes</ul><br/>
+        {/* <input
+        type="check"
+        value={check}
         onChange={(e)=>setCheckbox(e.target.value)}
-        required>No</checkbox><br/><br/>
-        <radiobutton
+        required></input><br/><br/> */}
+        <input
         type="radio"
-        value={radiobutton}
+        value={radio}
         onChange={(e)=>setRadiobutton(e.target.value)}
-        required>This</radiobutton><br/>
-        <radiobutton
+        required></input><ul>YES</ul><br/>
+        {/* <input
         type="radio"
-        value={radiobutton}
+        value={radio}
         onChange={(e)=>setRadiobutton(e.target.value)}
-        required>That</radiobutton><br/><br/>
+        required>That</input><br/><br/> */}
         <button type="submit">Submit</button>
       </form>
     </div>
